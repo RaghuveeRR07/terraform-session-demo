@@ -6,13 +6,13 @@ terraform {
     }
   }
 
-#   backend "remote" {
-#     organization = var.organization
+  # backend "remote" {
+  #   organization = "tf-basics"
 
-#     workspaces {
-#       name = var.workspace
-#     }
-#   }
+  #   workspaces {
+  #     name = "tf-basics"
+  #   }
+  # }
 }
 
 provider "aws" {}
