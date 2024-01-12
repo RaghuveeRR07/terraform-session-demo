@@ -66,3 +66,11 @@ resource "aws_db_instance" "terraform_basics_rds_instance" {
   skip_final_snapshot    = true
   vpc_security_group_ids = [aws_security_group.tf_basics_rds_security_group.id]
 }
+
+output "instance_ip_addr" {
+  value = aws_instance.terraform_basics.public_ip
+}
+
+output "rds_endpoint" {
+  value = aws_db_instance.terraform_basics_rds_instance.endpoint
+}
