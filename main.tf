@@ -32,8 +32,8 @@ resource "aws_security_group" "tf_basics_ec2_security_group" {
 }
 
 resource "aws_instance" "terraform_basics" {
-  ami           = var.ami
-  instance_type = var.instance_type
+  ami           = "ami-0287a05f0ef0e9d9a"
+  instance_type = "t2.micro"
   key_name      = var.key_name
 
   vpc_security_group_ids = [aws_security_group.tf_basics_ec2_security_group.id]
